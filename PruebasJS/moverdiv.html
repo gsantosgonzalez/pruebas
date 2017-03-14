@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas con JS</title>
+	<style>
+		.botones{
+			height: 150px;
+			margin: auto;
+			width: 200px;
+		}
+		.miDiv{
+			background-color: pink; 
+			position: absolute;
+			/*height: 150px;
+			width: 150px;*/
+		}
+	</style>
+</head>
+<body onload="crearDiv()">
+	<div id = "miDiv" class="miDiv"></div>
+	<div class = "botones">
+		<input type="button" value = "Top Left" onclick = "mover('topLeft')">
+		<input type="button" value = "Top Right" onclick = "mover('topRight')">
+		<input type="button" value = "Bottom Left" onclick = "mover('bottomLeft')">
+		<input type="button" value = "Bottom Right" onclick = "mover('bottomRight')">
+	</div>
+	<script>
+		var miDiv = document.getElementById("miDiv");
+		var miDivWidth = 355;
+		var miDivHeight = 400;
+
+		function crearDiv(){
+			miDiv.style.width = miDivWidth+"px";
+			miDiv.style.height = miDivHeight+"px";	
+		}
+	
+		function mover(direction){
+			switch(direction){
+				case 'topLeft':
+					setTimeout(function(){
+						miDiv.style.top = "0px";
+						miDiv.style.left = "0px";}, 2000);
+					break;
+				case 'topRight':
+					setTimeout(function(){
+						miDiv.style.top = "0px";
+						miDiv.style.left = window.innerWidth-miDivWidth+"px";}, 2000);
+					break;
+				case 'bottomLeft':
+					miDiv.style.top = window.innerHeight-miDivHeight+"px";
+					miDiv.style.left = "0px";
+					break;
+				case 'bottomRight':
+					miDiv.style.top = window.innerHeight-miDivHeight+"px";
+					miDiv.style.left = window.innerWidth-miDivWidth+"px";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>

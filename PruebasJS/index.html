@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas con JS</title>
+</head>
+<body onload="colorP()">
+	<p>1. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>2. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>3. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>4. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>5. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>6. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>7. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>8. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<p>9. JavaScript arrays are used to store multiple values in a single variable.</p>
+	<script>
+		function colorP(){
+			var p = document.getElementsByTagName("P");
+			var colores = ["red", "blue", "green", "magenta", "pink", "yellow", "gray", "brown", "lightblue"];
+			var i, j=0;
+			if(p.length <= colores.length){
+				for (var i = 0; i < p.length; i++) {
+					//console.log(i);
+					p[i].style.backgroundColor = colores[i];
+					p[i].style.height = window.innerHeight/p.length+"px";
+					p[i].style.margin = "auto";
+					p[i].style.top = this.height/2+"px";	
+					p[i].style.width = "80%";
+				}
+			}
+		}
+	</script> 
+</body>
+</html>
