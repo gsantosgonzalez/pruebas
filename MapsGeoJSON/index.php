@@ -130,7 +130,7 @@ function handleDrop(e) {
         loadGeoJsonString(e.target.result);
       };
       reader.onerror = function(e) {
-        console.error('reading failed');
+        console.error('Error de Lectura');
       };
       reader.readAsText(file);
     }
